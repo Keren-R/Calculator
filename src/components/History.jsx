@@ -1,17 +1,13 @@
 import React, {useContext, useState} from "react";
 import Layout from "./Layout";
-import {HistoryContext} from "../context/Operations.context";
+import {HistoryContext} from "../context/History.context";
 export default function History() {
-    const { history } = useContext(HistoryContext);
+    const { history , clearHistory} = useContext(HistoryContext);
     const [historyCleared, setHistoryCleared] = useState(false);
 
     function handleClearHistory(){
-        history.clear();
-        setHistoryCleared(true);
-    }
-
-    if (historyCleared) {
-        setHistoryCleared(false);
+        clearHistory()
+        setHistoryCleared(() => !historyCleared);
     }
 
     return(

@@ -1,24 +1,22 @@
 import React, {useContext, useState} from "react";
 import { evaluate } from 'mathjs';
 import Layout from "./Layout";
-import {HistoryContext} from '../context/Operations.context';
+import {HistoryContext} from '../context/History.context';
 import "../styles/Calculator.css"
 
 export default function Calculator() {
 
     const [display, setDisplay] = useState('0');
-    const { history} = useContext(HistoryContext);
-    function handleClick(value) {
+    const { updateHistory } = useContext(HistoryContext);
+
+    function handleClick(event) {
+        let value = event.target.innerText
         if (display === '') {
             setDisplay(value);
         } else {
             setDisplay(display + value);
         }
         updateHistory(value)
-    }
-
-    function updateHistory(value) {
-        history.set(new Date(), value);
     }
 
     function handleClear() {
@@ -46,11 +44,11 @@ export default function Calculator() {
             <div className="display">{display || '0'}</div>
             <div className="buttons">
                 {React.Children.toArray(numbers.map((num) => {
-                    return <button onClick={() => handleClick(num)} type="button">{num}</button>
+                    return <button onClick={handleClick} type="button">{num}</button>
                 }))}
 
                 {React.Children.toArray(ops.map((op) => {
-                    return <button className="ops-buttons" onClick={() => handleClick(op)} type="button">{op}</button>
+                    return <button className="ops-buttons" onClick={handleClick} type="button">{op}</button>
                 }))}
 
             <button style={{"background": "green"}} type="button" onClick={handleCalculation}>=</button>

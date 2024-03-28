@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {useNavigate} from "react-router-dom";
 import {AuthContext} from "../context/Auth.context";
-import {HistoryContext} from "../context/Operations.context";
+import {HistoryContext} from "../context/History.context";
 
 
 
