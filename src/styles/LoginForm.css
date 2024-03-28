@@ -1,0 +1,30 @@
+#login-button {
+    width: 100%
+}
+
+.login-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.input-box input{
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+}
+
+.login-container {
+    width: 450px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
