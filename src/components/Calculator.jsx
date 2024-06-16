@@ -51,8 +51,8 @@ export default function Calculator() {
                     return <button className="ops-buttons" onClick={handleClick} type="button">{op}</button>
                 }))}
 
-            <button style={{"background": "green"}} type="button" onClick={handleCalculation}>=</button>
-            <button style={{"background": "orange"}} type="button" onClick={handleClear}>C</button>
+            <button id="equal-button" type="button" onClick={handleCalculation}>=</button>
+            <button id="clear-button" type="button" onClick={handleClear}>C</button>
 
             </div>
 

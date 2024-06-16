@@ -2,10 +2,12 @@ import React, {useContext} from "react";
 import { useNavigate } from 'react-router-dom';
 import {AuthContext} from "../context/Auth.context";
 import '../styles/LoginForm.css';
+import Button from "./Button";
 
 export default function LoginForm() {
     let navigate = useNavigate();
     const {loggedInUser, handleChange} = useContext(AuthContext);
+    const buttonProps = {id: "login-button", className: "", type: "submit", onClickFunc: () => {}, title: "Login"};
 
     function handleSubmit(){
         navigate(`/`);
@@ -25,8 +27,7 @@ export default function LoginForm() {
                         <text>Email: </text>
                         <input type="text" placeholder="User Email" required/>
                     </div>
-                    <button id="login-button" type="submit">Login</button>
-
+                    <Button props={buttonProps} />
                 </form>
             </div>
         </div>

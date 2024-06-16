@@ -28,3 +28,11 @@
     flex-direction: column;
 }
 
+#clear-button {
+    background: orange;
+}
+
+#equal-button {
+    background: green;
+}
+
