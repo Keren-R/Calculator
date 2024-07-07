@@ -15,7 +15,7 @@ export default function Header() {
 
     function handleLogout() {
         history.clear();
-        handleRoute('/login')
+        handleRoute('/')
     }
 
     return (
@@ -26,7 +26,7 @@ export default function Header() {
                 <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                     <li>
                         <button type="button" className="nav-link px-2 link-dark"
-                                onClick={() => handleRoute('/')}>Calculator
+                                onClick={() => handleRoute('/calculator')}>Calculator
                         </button>
                     </li>
                     <li>

@@ -10,7 +10,7 @@ export default function LoginForm() {
     const buttonProps = {id: "login-button", className: "", type: "submit", onClickFunc: () => {}, title: "Login"};
 
     function handleSubmit(){
-        navigate(`/`);
+        navigate(`/calculator`);
     }
 
     return(
@@ -25,7 +25,7 @@ export default function LoginForm() {
                     </div>
                     <div className="input-box">
                         <text>Email: </text>
-                        <input type="text" placeholder="User Email" required/>
+                        <input type="email" placeholder="User Email" required/>
                     </div>
                     <Button props={buttonProps} />
                 </form>

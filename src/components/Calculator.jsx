@@ -6,7 +6,7 @@ import "../styles/Calculator.css"
 
 export default function Calculator() {
 
-    const [display, setDisplay] = useState('0');
+    const [display, setDisplay] = useState('');
     const { updateHistory } = useContext(HistoryContext);
 
     function handleClick(event) {
